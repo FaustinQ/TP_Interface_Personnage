@@ -1,36 +1,47 @@
-# README : Interface qui permet de remplir une fiche de personnage.
-TLDR : Cette application est un TP pour le cours de pour l'IUT de Vannes.
+# 🧙 Fiche Personnage - Interface graphique Java (R2.02 - Séance 2)
+
+## 🎯 Objectif
+
+Ce projet a pour but de concevoir une interface graphique en Java permettant de gérer une fiche personnage pour un jeu de rôle, en respectant le modèle MVC et les principes de la programmation orientée objet. Il s'inscrit dans le cadre du module R2.02 (Développement d'IHM) du BUT Informatique – Semestre 2.
 
 ---
 
-## Fonctionnalités principales
-1. **Interface graphique**  
-   Cette interface sera composée :
-    • d’une barre d’outils (à gauche) contenant une grille de 4 boutons représentant chacun une action (sous forme de texte et/ou d’image) : nouveau, charger, enregistrer, enregistrer sous…) ;
-    • d’une barre d’état (en bas), avec un label vide à gauche et la version de programme à droite;
-    • d’un panneau d’information (au centre), avec une zone de saisie (nom), des listes déroulantes (race, classe), et des boutons radio (sexe).
+## 🧩 Fonctionnalités
 
-2. **Réaction aux évènements**  
-   On souhaite maintenant pouvoir définir des réactions aux différents évènements utilisateurs.
-En reprenant les exemples vus en cours, et en veillant à bien séparer le code de présentation
-des composants de celui permettant la réaction aux actions utilisateurs (c’est ici que la classe
-CharacterSheetListener est à compléter), afficher l’action effectuée dans le champs
-statut de la barre d’état. On ne s'intéresse ici qu'aux actions des boutons de la barre d’outils.
+### 1. Interface Graphique (Swing)
+- **Barre d’outils** à gauche avec 4 boutons : `Nouveau`, `Charger`, `Enregistrer`, `Enregistrer sous`.
+- **Barre d’état** en bas avec un champ de statut (texte dynamique) à gauche et la version du programme à droite.
+- **Zone centrale** : 
+  - Champ de texte pour le **Nom**.
+  - Menus déroulants pour **Race** et **Classe**.
+  - Boutons radio pour le **Sexe**.
+  - **Spinners** pour les **caractéristiques** : Force (Str), Constitution (Con), Dextérité (Dex), Intelligence (Int), Sagesse (Wis), Charisme (Cha).
 
-3. **Aller plus loin**  
-   On souhaite maintenant ajouter plus d’éléments à notre fiche, notamment les caractéristiques.
-   Le système de caractéristiques obéit à certaines règles :
-      • Chaque caractéristique a une valeur initiale de 8 et doit être comprise entre 8 et 15.
-      • Le total de points à dépenser est de 27.
-Les caractéristiques à ajouter sont la Force (Str), la Constitution (Con), la Dextérité (Dex),
-l’Intelligence (Int), la Sagesse (Wis) et le Charisme (Cha). Vous veillerez à respecter le
-design pattern MVC en ajoutant les caractéristiques au Model. 
+### 2. Gestion des événements
+- Affichage dans la barre d’état de l’action effectuée par l’utilisateur (clic sur un bouton de la barre d’outils).
+- Utilisation d’un contrôleur séparé (`CharacterSheetListener`) pour la gestion des événements.
+
+### 3. Caractéristiques et règles de validation
+- Chaque caractéristique est initialisée à 8 et peut aller de 8 à 15.
+- Le joueur dispose de **27 points maximum à répartir**.
+- Le modèle assure la cohérence des règles via un **PropertyChangeSupport**.
 
 ---
 
-## Quelques images 
+## 🛠️ Technologies utilisées
+
+- **Java 8+**
+- **Swing** pour l'interface graphique
+- **Design pattern MVC**
+- **Beans / PropertyChangeListener**
+
+---
 
 ![interface](https://github.com/user-attachments/assets/0f42201a-ca17-4569-8faf-eb68c9f93024)
 
-
 ---
+
+Projet réalisé par [Ton Nom]
+BUT Informatique – IUT de Vannes
+Module R2.02 – Interface Graphique Java
+Année universitaire 2024-2025
