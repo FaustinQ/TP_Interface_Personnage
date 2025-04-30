@@ -41,7 +41,7 @@ Ce projet a pour but de concevoir une interface graphique en Java permettant de 
 
 ---
 
-Projet réalisé par [Ton Nom]
+Projet réalisé par QUINTANE Faustin
 BUT Informatique – IUT de Vannes
 Module R2.02 – Interface Graphique Java
 Année universitaire 2024-2025
